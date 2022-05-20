@@ -287,15 +287,19 @@ def reconstruction(args):
         os.makedirs(f'{logfolder}/imgs_test_all', exist_ok=True)
         PSNRs_test = evaluation(test_dataset,tensorf, args, renderer, f'{logfolder}/imgs_test_all/',
                                 N_vis=-1, N_samples=-1, white_bg = white_bg, ndc_ray=ndc_ray,device=device)
+        #render_dataset = dataset(args.datadir, split= 'render', downsample = 1.0, is_stack = True)
+        # PSNRs_test = evaluation(render_dataset,tensorf, args, renderer, f'{logfolder}/imgs_test_all/',
+        #                         N_vis=-1, N_samples=-1, white_bg = white_bg, ndc_ray=ndc_ray,device=device)
         summary_writer.add_scalar('test/psnr_all', np.mean(PSNRs_test), global_step=iteration)
         print(f'======> {args.expname} test all psnr: {np.mean(PSNRs_test)} <========================')
 
     if args.render_path:
-        c2ws = test_dataset.render_path
-        # c2ws = test_dataset.poses
+        render_dataset = dataset(args.datadir, split= 'render', downsample = 1.0, is_stack = True)
+        #c2ws = render_dataset.render_path
+        c2ws = render_dataset.poses
         print('========>',c2ws.shape)
         os.makedirs(f'{logfolder}/imgs_path_all', exist_ok=True)
-        evaluation_path(test_dataset,tensorf, c2ws, renderer, f'{logfolder}/imgs_path_all/',
+        evaluation_path(render_dataset,tensorf, c2ws, renderer, f'{logfolder}/imgs_path_all/',
                                 N_vis=-1, N_samples=-1, white_bg = white_bg, ndc_ray=ndc_ray,device=device)
 
 
