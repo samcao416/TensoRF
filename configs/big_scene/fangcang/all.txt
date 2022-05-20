@@ -1,7 +1,6 @@
-
-dataset_name = blender
-datadir = /sharedata/home/caojm/datasets/nerf_synthetic/lego
-expname =  tensorf_lego_VM
+dataset_name = bs_blender
+datadir = /sharedata/home/caojm/codes/ds_ngp/data/fangcang/all
+expname =  tensorf_fangcang_all_VM
 basedir = ./log
 
 n_iters = 30000

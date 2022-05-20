@@ -1,6 +1,5 @@
-
 dataset_name = blender
-datadir = /sharedata/home/caojm/datasets/nerf_synthetic/lego
+datadir = /sharedata/home/caojm/codes/ds_ngp/data/outdoor_round2_agi
 expname =  tensorf_lego_VM
 basedir = ./log
 

@@ -1,7 +1,6 @@
-
 dataset_name = blender
-datadir = /sharedata/home/caojm/datasets/nerf_synthetic/lego
-expname =  tensorf_lego_VM
+datadir = /sharedata/home/caojm/codes/ds_ngp/data/fangcang/group3
+expname =  tensorf_fangcang_group3_VM
 basedir = ./log
 
 n_iters = 30000
