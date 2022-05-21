@@ -20,7 +20,8 @@ class BigSceneDataset(Dataset):
         #self.img_wh
         self.define_transforms()
 
-        self.scene_bbox = torch.Tensor([[-4.0, -4.0, -4.0,], [4.0, 4.0, 4.0]])
+        #self.scene_bbox = torch.Tensor([[-4.0, -4.0, -4.0,], [4.0, 4.0, 4.0]])
+        self.scene_bbox = torch.Tensor([[-10.0, -10.0, -10.0,], [10.0, 10.0, 10.0]])
         self.blender2opencv = np.array([[1, 0, 0, 0], [0, -1, 0, 0], [0, 0, -1, 0], [0, 0, 0, 1]])
         if self.split == 'render':
             self.read_meta_render()

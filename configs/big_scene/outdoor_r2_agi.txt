@@ -1,6 +1,6 @@
-dataset_name = blender
+dataset_name = bs_blender
 datadir = /sharedata/home/caojm/codes/ds_ngp/data/outdoor_round2_agi
-expname =  tensorf_lego_VM
+expname =  tensorf_outdoor_r2_agi_VM_bb10
 basedir = ./log
 
 n_iters = 30000

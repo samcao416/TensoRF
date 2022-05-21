@@ -1,6 +1,6 @@
-dataset_name = blender
+dataset_name = bs_blender
 datadir = /sharedata/home/caojm/codes/ds_ngp/data/skdfs/1
-expname =  tensorf_lego_VM
+expname =  tensorf_skdfs_1_bb10
 basedir = ./log
 
 n_iters = 30000

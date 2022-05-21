@@ -1,6 +1,6 @@
 dataset_name = bs_blender
 datadir = /sharedata/home/caojm/codes/ds_ngp/data/fangcang/all
-expname =  tensorf_fangcang_all_VM
+expname =  tensorf_fangcang_all_VM_bb10
 basedir = ./log
 
 n_iters = 30000
